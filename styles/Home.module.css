@@ -1,0 +1,66 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerflip {
+  background-image: url('../pages/assets/header_back\ .jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.videoresponsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.videoresponsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.backgroundsection {
+  background-image: url('../public/magic_card_display.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+}
+
+.contactbackground {
+  background-image: url('../pages/assets/klim-musalimov-mAIBbrE-JN0-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background-color: #fd5e87; 
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999; 
+  mix-blend-mode: difference; 
+  transition: transform 0.1s ease-out;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}

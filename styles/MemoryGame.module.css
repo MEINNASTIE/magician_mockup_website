@@ -1,0 +1,29 @@
+/* components/MemoryGame.module.css */
+.memoryGame {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #ccc;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .card:hover {
+    background-color: #ddd;
+  }
+  
+  .flipped {
+    background-color: #fff;
+    pointer-events: none;
+  }
+  
