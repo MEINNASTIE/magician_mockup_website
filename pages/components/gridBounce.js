@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react'
+import { motion } from 'framer-motion'
 
 const GridWithBounceEffect = () => {
   const gridItems = [
@@ -54,4 +54,4 @@ const GridWithBounceEffect = () => {
   );
 };
 
-export default GridWithBounceEffect;
+export default GridWithBounceEffect

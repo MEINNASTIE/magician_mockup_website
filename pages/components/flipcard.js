@@ -1,34 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import styles from '../../styles/FlipCard.module.css';
+import React, { useState, useEffect } from 'react'
+import styles from '../../styles/FlipCard.module.css'
 
 const FlipCard = ({ top, left, tiltDegree }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-  const [clickCount, setClickCount] = useState(0);
-  const [isVanishing, setIsVanishing] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(false)
+  const [clickCount, setClickCount] = useState(0)
+  const [isVanishing, setIsVanishing] = useState(false)
 
   const handleCardClick = () => {
     if (clickCount < 0) {
-      setClickCount((prevCount) => prevCount + 1);
+      setClickCount((prevCount) => prevCount + 1)
     } else {
-      setIsVanishing(true);
+      setIsVanishing(true)
     }
   };
 
   const handleTransitionEnd = () => {
     if (isVanishing) {
-      setIsFlipped(false);
+      setIsFlipped(false)
       setTimeout(() => {
-        setIsVanishing(false);
-        setClickCount(0);
+        setIsVanishing(false)
+        setClickCount(0)
       }, 10000); // 10 seconds
     }
   };
 
   useEffect(() => {
     if (!isVanishing) {
-      setClickCount(0);
+      setClickCount(0)
     }
-  }, [isVanishing]);
+  }, [isVanishing])
 
   return (
     <div
@@ -69,7 +69,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default App
 
 
 

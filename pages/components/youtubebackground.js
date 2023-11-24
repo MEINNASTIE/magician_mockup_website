@@ -1,7 +1,6 @@
-// components/YouTubeVideo.js
-import React from 'react';
+import React from 'react'
 
-import styles from '../../styles/Home.module.css';
+import styles from '../../styles/Home.module.css'
 
 const YouTubeVideo = ({ videoId }) => {
   return (
@@ -24,6 +23,6 @@ const YouTubeVideo = ({ videoId }) => {
   );
 };
 
-export default YouTubeVideo;
+export default YouTubeVideo
 
 

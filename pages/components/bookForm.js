@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 const BookForm = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
 
   useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem('contactFormData')) || {};
-    setName(storedData.name || '');
-    setEmail(storedData.email || '');
-    setPhoneNumber(storedData.phoneNumber || '');
+    const storedData = JSON.parse(localStorage.getItem('contactFormData')) || {}
+    setName(storedData.name || '')
+    setEmail(storedData.email || '')
+    setPhoneNumber(storedData.phoneNumber || '')
   }, []);
 
   useEffect(() => {
-    const formData = { name, email, phoneNumber };
-    localStorage.setItem('contactFormData', JSON.stringify(formData));
-  }, [name, email, phoneNumber]);
+    const formData = { name, email, phoneNumber }
+    localStorage.setItem('contactFormData', JSON.stringify(formData))
+  }, [name, email, phoneNumber])
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Form submitted!');
+    e.preventDefault()
+    alert('Form submitted!')
   };
 
   return (
@@ -60,5 +60,5 @@ const BookForm = () => {
   );
 };
 
-export default BookForm;
+export default BookForm
 

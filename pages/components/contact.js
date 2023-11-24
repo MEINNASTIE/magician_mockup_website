@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,18 +8,18 @@ const ContactForm = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
+    const { name, value } = e.target
+    setFormData((prevData) => ({ ...prevData, [name]: value }))
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    const storedData = JSON.parse(localStorage.getItem('contactFormData')) || [];
+    e.preventDefault()
+  
+    const storedData = JSON.parse(localStorage.getItem('contactFormData')) || []
     storedData.push(formData);
-    localStorage.setItem('contactFormData', JSON.stringify(storedData));
+    localStorage.setItem('contactFormData', JSON.stringify(storedData))
 
-    setFormData({ name: '', email: '', message: '' });
+    setFormData({ name: '', email: '', message: '' })
   };
 
   return (
@@ -73,4 +73,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactForm

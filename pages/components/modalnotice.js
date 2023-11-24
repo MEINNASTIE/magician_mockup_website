@@ -1,22 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 
 const ModalNotice = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+      setIsVisible(true)
+    }, 5000)
 
-    return () => clearTimeout(timeoutId);
+    return () => clearTimeout(timeoutId)
   }, []);
 
   const handleClose = () => {
-    setIsVisible(false);
+    setIsVisible(false)
   };
 
   return (
@@ -55,4 +55,4 @@ const ModalNotice = () => {
   );
 };
 
-export default ModalNotice;
+export default ModalNotice

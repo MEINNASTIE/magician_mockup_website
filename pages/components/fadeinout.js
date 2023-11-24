@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 function FadeInAndOut({ children }) {
     return (
@@ -17,7 +17,7 @@ function FadeInAndOut({ children }) {
     );
   }
 
-export default FadeInAndOut;
+export default FadeInAndOut
 
 
 
